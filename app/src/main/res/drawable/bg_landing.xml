@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Landing background: calm blue gradient with a darker top and soft lower tone. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="270"
+        android:startColor="@color/landing_blue_deep"
+        android:centerColor="@color/landing_blue"
+        android:endColor="@color/landing_blue_soft"
+        android:type="linear" />
+</shape>
