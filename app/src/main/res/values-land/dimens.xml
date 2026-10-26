@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- In the side pane the profile card sits below the brand bar instead of overlapping it. -->
+    <dimen name="profile_overlap">0dp</dimen>
+    <dimen name="brand_bar_padding_bottom">16dp</dimen>
+</resources>
