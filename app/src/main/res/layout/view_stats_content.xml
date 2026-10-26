@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Scrollable statistics below the pinned brand bar + profile card:
+    1. game-type tiles (Rapid, Blitz, Bullet, Daily; other types behind a toggle)
+    2. rating card for the selected type (current rating big, best rating small)
+    3. win / draw / loss card with a proportional bar
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/screen_padding"
+    android:paddingTop="@dimen/space_l"
+    android:paddingEnd="@dimen/screen_padding"
+    android:paddingBottom="@dimen/space_xxl">
+
+    <TextView
+        android:id="@+id/results_notice"
+        style="@style/Text.Message.Notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_l"
+        android:accessibilityLiveRegion="polite"
+        android:visibility="gone" />
+
+    <TextView
+        style="@style/Text.Section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:accessibilityHeading="true"
+        android:text="@string/section_game_types" />
+
+    <!-- Rapid, Blitz, Bullet, Daily -->
+    <GridLayout
+        android:id="@+id/mode_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_edge_compensation"
+        android:layout_marginTop="@dimen/space_s"
+        android:layout_marginEnd="@dimen/grid_edge_compensation"
+        android:columnCount="@integer/mode_grid_columns"
+        android:useDefaultMargins="false" />
+
+    <!-- Any other game type the API returns. Hidden when there are none. -->
+    <Button
+        android:id="@+id/other_modes_toggle"
+        style="@style/LinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <GridLayout
+        android:id="@+id/other_mode_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_edge_compensation"
+        android:layout_marginEnd="@dimen/grid_edge_compensation"
+        android:columnCount="@integer/mode_grid_columns"
+        android:useDefaultMargins="false"
+        android:visibility="gone" />
+
+    <!-- One overview card keeps the rating and game record together. -->
+    <LinearLayout
+        style="@style/Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/detail_heading"
+                style="@style/Text.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:accessibilityHeading="true"
+                android:maxLines="2" />
+
+            <ImageView
+                android:layout_width="@dimen/overview_icon_size"
+                android:layout_height="@dimen/overview_icon_size"
+                android:layout_marginStart="@dimen/space_s"
+                android:background="@drawable/bg_outline_button"
+                android:contentDescription="@string/overview_icon_desc"
+                android:importantForAccessibility="yes"
+                android:padding="@dimen/space_s"
+                android:src="@drawable/ic_stats_chart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_current_rating" />
+
+                <TextView
+                    android:id="@+id/current_rating"
+                    style="@style/Text.RatingBig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/current_date"
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/stroke_thin"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/space_m"
+                android:layout_marginEnd="@dimen/space_m"
+                android:background="@color/border" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_best_rating" />
+
+                <TextView
+                    android:id="@+id/best_rating"
+                    style="@style/Text.RatingMid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/best_date"
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/best_game_link"
+                    style="@style/LinkButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_open_in_new"
+                    android:minHeight="0dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/best_game_link"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stroke_thin"
+            android:layout_marginTop="@dimen/space_m"
+            android:background="@color/border" />
+
+    </LinearLayout>
+
+    <!-- Record is separate; the rating overview above keeps its compact layout. -->
+    <LinearLayout
+        style="@style/Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        android:background="@drawable/bg_record_card"
+        android:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Section"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:accessibilityHeading="true"
+                android:text="@string/label_record" />
+
+            <TextView
+                android:id="@+id/record_total"
+                style="@style/Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/record_columns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/record_wins"
+                    style="@style/Text.RecordValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/win" />
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/label_wins" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/record_draws"
+                    style="@style/Text.RecordValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/draw" />
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/label_draws" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/record_losses"
+                    style="@style/Text.RecordValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/loss" />
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/label_losses" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Segment widths are set from the API win/draw/loss counts in StatsPanel. -->
+        <LinearLayout
+            android:id="@+id/record_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/record_bar_height"
+            android:layout_marginTop="@dimen/space_s"
+            android:background="@drawable/bg_record_track"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/record_bar_wins"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/win" />
+
+            <View
+                android:id="@+id/record_bar_draws"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/draw" />
+
+            <View
+                android:id="@+id/record_bar_losses"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/loss" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/record_summary"
+                style="@style/Text.Caption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/record_player_summary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/record_win_rate"
+                style="@style/Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/win"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/record_empty"
+            style="@style/Text.Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
