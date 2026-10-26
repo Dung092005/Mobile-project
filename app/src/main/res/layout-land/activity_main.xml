@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Landscape: brand bar + profile card stay pinned in a side pane; stats scroll on the right. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_landing" />
+
+    <LinearLayout
+        android:id="@+id/results_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/canvas"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <!-- The side pane only scrolls on its own if large fonts make it taller than the screen. -->
+        <ScrollView
+            android:id="@+id/results_side"
+            tools:ignore="InconsistentLayout"
+            android:layout_width="@dimen/side_pane_width"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_landing"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:id="@+id/results_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/space_l">
+
+                <include layout="@layout/view_brand_bar" />
+
+                <include
+                    layout="@layout/view_profile_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_l"
+                    android:layout_marginTop="@dimen/profile_overlap"
+                    android:layout_marginEnd="@dimen/space_l" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/stats_scroll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/canvas"
+            android:clipToPadding="false"
+            android:fillViewport="true">
+
+            <include layout="@layout/view_stats_content" />
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
