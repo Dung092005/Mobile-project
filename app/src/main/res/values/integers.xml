@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Number of game-type tiles per row on the results screen. -->
+    <integer name="mode_grid_columns">2</integer>
+    <!-- Allows a leading @ and stray spaces around a 25-character username. -->
+    <integer name="username_input_max_length">32</integer>
+    <integer name="fade_duration_ms">220</integer>
+</resources>
