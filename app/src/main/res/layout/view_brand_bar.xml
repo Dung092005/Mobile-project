@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Compact brand row pinned above the results. Background comes from the parent. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/brand_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/screen_padding"
+    android:paddingTop="@dimen/space_m"
+    android:paddingEnd="@dimen/space_m"
+    android:paddingBottom="@dimen/brand_bar_padding_bottom">
+
+    <ImageView
+        android:layout_width="@dimen/logo_compact"
+        android:layout_height="@dimen/logo_compact"
+        android:background="@drawable/bg_logo_badge"
+        android:importantForAccessibility="no"
+        android:padding="@dimen/space_s"
+        android:src="@drawable/ic_pawn" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_m"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Text.BrandCompact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityHeading="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/brand_name" />
+
+        <TextView
+            style="@style/Text.OnBrandCaption"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/brand_tagline" />
+    </LinearLayout>
+
+</LinearLayout>
