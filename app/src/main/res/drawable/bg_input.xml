@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Container uses addStatesFromChildren so it reflects the EditText focus. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/surface" />
+            <stroke android:width="@dimen/stroke_selected" android:color="@color/brand_bright" />
+            <corners android:radius="@dimen/radius_control" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/surface_variant" />
+            <stroke android:width="@dimen/stroke_thin" android:color="@color/border" />
+            <corners android:radius="@dimen/radius_control" />
+        </shape>
+    </item>
+</selector>

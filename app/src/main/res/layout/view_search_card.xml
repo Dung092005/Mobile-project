@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_card"
+    style="@style/Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_xl">
+
+    <TextView
+        android:id="@+id/username_label"
+        style="@style/Text.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/username_input"
+        android:text="@string/username_label"
+        android:textColor="@color/ink" />
+
+    <!-- addStatesFromChildren lets the frame show the EditText's focus state. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:layout_marginTop="@dimen/space_s"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_m"
+        android:paddingEnd="@dimen/space_m">
+
+        <ImageView
+            android:layout_width="@dimen/icon_m"
+            android:layout_height="@dimen/icon_m"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_at" />
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_s"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="sans-serif"
+            android:hint="@string/username_hint"
+            android:imeOptions="actionSearch|flagNoExtractUi"
+            android:importantForAutofill="no"
+            android:inputType="text|textNoSuggestions"
+            android:maxLength="@integer/username_input_max_length"
+            android:maxLines="1"
+            android:textColor="@color/ink"
+            android:textColorHint="@color/muted"
+            android:textSize="@dimen/text_input"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+
+    <!-- Error/notice line. Hidden until there is something to say. -->
+    <TextView
+        android:id="@+id/lookup_message"
+        style="@style/Text.Message.Error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        android:accessibilityLiveRegion="polite"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_l">
+
+        <Button
+            android:id="@+id/lookup_button"
+            style="@style/PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/lookup_button" />
+
+        <ProgressBar
+            android:id="@+id/lookup_progress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="@dimen/progress_small"
+            android:layout_height="@dimen/progress_small"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="@dimen/space_l"
+            android:contentDescription="@string/loading_desc"
+            android:indeterminateTint="@color/on_brand"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>
