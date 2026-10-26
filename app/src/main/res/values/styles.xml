@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text -->
+    <style name="Text" parent="">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="Text.HeroTitle">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/on_brand</item>
+        <item name="android:textSize">@dimen/text_hero_title</item>
+    </style>
+
+    <style name="Text.HeroSubtitle">
+        <item name="android:textColor">@color/brand_on_dark_muted</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+
+    <style name="Text.BrandCompact">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/on_brand</item>
+        <item name="android:textSize">@dimen/text_brand_compact</item>
+    </style>
+
+    <style name="Text.OnBrandCaption">
+        <item name="android:textColor">@color/brand_on_dark_muted</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="Text.Section">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textSize">@dimen/text_label</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text.Label">
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textSize">@dimen/text_label</item>
+    </style>
+
+    <style name="Text.Caption">
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+
+    <style name="Text.RatingBig">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/brand</item>
+        <item name="android:textSize">@dimen/text_rating_big</item>
+    </style>
+
+    <style name="Text.RatingMid">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_rating_mid</item>
+    </style>
+
+    <style name="Text.RecordValue">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">@dimen/text_record_value</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="Text.Message">
+        <item name="android:textSize">@dimen/text_label</item>
+        <item name="android:paddingStart">@dimen/space_m</item>
+        <item name="android:paddingEnd">@dimen/space_m</item>
+        <item name="android:paddingTop">@dimen/space_s</item>
+        <item name="android:paddingBottom">@dimen/space_s</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+    </style>
+
+    <style name="Text.Message.Error">
+        <item name="android:textColor">@color/error</item>
+        <item name="android:background">@drawable/bg_message_error</item>
+    </style>
+
+    <style name="Text.Message.Notice">
+        <item name="android:textColor">@color/notice</item>
+        <item name="android:background">@drawable/bg_message_notice</item>
+    </style>
+
+    <!-- Containers -->
+    <style name="Card">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:elevation">@dimen/card_elevation</item>
+        <item name="android:padding">@dimen/space_l</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- Controls -->
+    <style name="PrimaryButton" parent="android:Widget.Material.Button">
+        <item name="android:background">@drawable/bg_primary_button</item>
+        <item name="android:textColor">@color/on_brand</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="LinkButton" parent="android:Widget.Material.Button.Borderless">
+        <item name="android:textColor">@color/brand_bright</item>
+        <item name="android:textSize">@dimen/text_label</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">@dimen/touch_target</item>
+        <item name="android:paddingStart">@dimen/space_s</item>
+        <item name="android:paddingEnd">@dimen/space_s</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:drawablePadding">@dimen/space_s</item>
+    </style>
+
+</resources>

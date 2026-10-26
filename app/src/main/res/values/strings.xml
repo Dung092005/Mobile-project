@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <string name="app_name" translatable="false">ChessStats</string>
+    <string name="brand_name" translatable="false">Chess.com</string>
+    <string name="brand_tagline">Thống kê</string>
+    <string name="landing_subtitle">Tra cứu rating, thành tích và thống kê của người chơi Chess.com.</string>
+
+    <!-- Lookup -->
+    <string name="username_label">Tên người dùng Chess.com</string>
+    <string name="username_hint">ví dụ: hikaru</string>
+    <string name="lookup_button">Tra cứu</string>
+    <string name="lookup_loading">Đang tra cứu…</string>
+    <string name="loading_desc">Đang tải</string>
+
+    <!-- Errors -->
+    <string name="error_empty_username">Vui lòng nhập tên người dùng Chess.com, ví dụ: hikaru.</string>
+    <string name="error_invalid_username">Tên người dùng chỉ gồm chữ cái, chữ số, dấu gạch dưới (_) hoặc gạch ngang (-).</string>
+    <string name="error_not_found">Không tìm thấy người chơi “%1$s” trên Chess.com. Hãy kiểm tra lại tên người dùng.</string>
+    <string name="error_rate_limited">Bạn đã gửi quá nhiều yêu cầu. Vui lòng đợi một lát rồi thử lại.</string>
+    <string name="error_server">Máy chủ Chess.com đang gặp sự cố (mã %1$d). Vui lòng thử lại sau.</string>
+    <string name="error_http">Yêu cầu thất bại (mã HTTP %1$d). Vui lòng thử lại.</string>
+    <string name="error_network">Không có kết nối mạng hoặc không kết nối được tới Chess.com. Hãy kiểm tra Internet rồi thử lại.</string>
+    <string name="error_timeout">Chess.com phản hồi quá lâu (hết thời gian chờ). Vui lòng thử lại.</string>
+    <string name="error_invalid_data">Dữ liệu nhận từ Chess.com không đúng định dạng. Vui lòng thử lại sau.</string>
+    <string name="error_no_stats">Người chơi “%1$s” chưa có thống kê cờ vua nào trên Chess.com.</string>
+    <string name="error_no_browser">Không tìm thấy ứng dụng để mở liên kết.</string>
+    <string name="notice_profile_unavailable">Không tải được hồ sơ người chơi; thống kê vẫn được hiển thị với thông tin mặc định.</string>
+    <string name="notice_avatar_unavailable">Không tải được ảnh đại diện; đang dùng hình mặc định.</string>
+
+    <!-- Profile card -->
+    <string name="player_avatar_desc">Ảnh đại diện của %1$s</string>
+    <string name="player_avatar_placeholder_desc">Ảnh đại diện mặc định</string>
+    <string name="player_country">Quốc gia: %1$s</string>
+    <string name="username_format" translatable="false">\@%1$s</string>
+    <string name="title_badge_desc">Danh hiệu %1$s</string>
+    <string name="change_player">Đổi người chơi</string>
+    <plurals name="mode_count">
+        <item quantity="other">%d thể loại cờ</item>
+    </plurals>
+
+    <!-- Game types -->
+    <string name="section_game_types">Ván đấu</string>
+    <string name="mode_rapid">Cờ nhanh</string>
+    <string name="mode_blitz">Cờ chớp</string>
+    <string name="mode_bullet">Cờ siêu chớp</string>
+    <string name="mode_daily">Cờ hàng ngày</string>
+    <string name="mode_daily_960">Cờ Fischer 960</string>
+    <string name="other_modes_show">Thể loại khác (%1$d)</string>
+    <string name="other_modes_hide">Ẩn thể loại khác</string>
+    <string name="tile_no_rating">Chưa có điểm</string>
+    <string name="value_missing" translatable="false">—</string>
+
+    <!-- Selected game type -->
+    <string name="detail_heading">%1$s · Tổng quan</string>
+    <string name="overview_icon_desc">Biểu đồ thống kê</string>
+    <string name="label_current_rating">Điểm hiện tại</string>
+    <string name="label_best_rating">Điểm cao nhất</string>
+    <string name="date_as_of">Cập nhật %1$s</string>
+    <string name="date_achieved">%1$s</string>
+    <string name="no_data">Chưa có dữ liệu</string>
+    <string name="best_game_link">Xem ván đạt mốc</string>
+    <string name="label_record">Kết quả ván đấu</string>
+    <string name="label_wins">Thắng</string>
+    <string name="label_draws">Hòa</string>
+    <string name="label_losses">Thua</string>
+    <string name="record_total">%1$s ván</string>
+    <string name="record_empty">Chưa ghi nhận ván nào.</string>
+    <string name="record_partial">Chưa đủ dữ liệu để tính tỷ lệ và tổng số ván.</string>
+    <string name="record_win_rate">Tỉ lệ thắng %1$s</string>
+    <string name="record_player_summary">Thành tích của người chơi</string>
+    <string name="record_bar_desc">Thắng %1$s, hòa %2$s, thua %3$s</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="space_xxs">2dp</dimen>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">12dp</dimen>
+    <dimen name="space_l">16dp</dimen>
+    <dimen name="space_xl">20dp</dimen>
+    <dimen name="space_xxl">28dp</dimen>
+    <dimen name="screen_padding">18dp</dimen>
+    <dimen name="landing_side_margin">0dp</dimen>
+
+    <!-- Shapes -->
+    <dimen name="radius_card">18dp</dimen>
+    <dimen name="radius_tile">14dp</dimen>
+    <dimen name="radius_control">12dp</dimen>
+    <dimen name="radius_pill">100dp</dimen>
+    <dimen name="stroke_thin">1dp</dimen>
+    <dimen name="stroke_selected">2dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+
+    <!-- Touch targets and controls -->
+    <dimen name="touch_target">48dp</dimen>
+    <dimen name="input_height">52dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="progress_small">22dp</dimen>
+    <!-- Icons and imagery -->
+    <dimen name="icon_m">22dp</dimen>
+    <dimen name="logo_hero">76dp</dimen>
+    <dimen name="logo_compact">34dp</dimen>
+    <dimen name="avatar_size">60dp</dimen>
+    <dimen name="avatar_padding">10dp</dimen>
+    <dimen name="badge_padding_h">6dp</dimen>
+
+    <!-- Layout -->
+    <dimen name="brand_bar_padding_bottom">30dp</dimen>
+    <dimen name="profile_overlap">-18dp</dimen>
+    <dimen name="record_bar_height">12dp</dimen>
+    <dimen name="overview_icon_size">40dp</dimen>
+    <dimen name="tile_min_height">88dp</dimen>
+    <dimen name="side_pane_width">320dp</dimen>
+    <!-- Tiles have space_xs margins; the grid pulls back by the same amount to stay aligned. -->
+    <dimen name="grid_edge_compensation">-4dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_hero_title">34sp</dimen>
+    <dimen name="text_brand_compact">20sp</dimen>
+    <dimen name="text_rating_big">40sp</dimen>
+    <dimen name="text_rating_mid">24sp</dimen>
+    <dimen name="text_title">18sp</dimen>
+    <dimen name="text_body">15sp</dimen>
+    <dimen name="text_input">17sp</dimen>
+    <dimen name="text_label">13sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_record_value">22sp</dimen>
+</resources>
