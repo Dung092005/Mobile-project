@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- API 26+ can switch the navigation icons to dark, so the bar can be fully transparent. -->
+    <style name="Theme.ChessStats" parent="Theme.ChessStats.Base">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>

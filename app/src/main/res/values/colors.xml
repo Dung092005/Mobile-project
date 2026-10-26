@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand: dark header with blue accent, matching the reference screen -->
+    <color name="brand_deep">#0B0D14</color>
+    <color name="brand">#3048C8</color>
+    <color name="brand_bright">#5268E4</color>
+    <color name="brand_tint">#DCE2FF</color>
+    <color name="brand_on_dark_muted">#C7D0FF</color>
+    <color name="landing_blue_deep">#102A56</color>
+    <color name="landing_blue">#1E5AA8</color>
+    <color name="landing_blue_soft">#5E9DCE</color>
+
+    <!-- Surfaces and text: warm neutrals -->
+    <color name="canvas">#F5F6FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F8F9FC</color>
+    <color name="tile_selected">#EEF1FF</color>
+    <color name="border">#E4E7F0</color>
+    <color name="border_selected">#5268E4</color>
+    <color name="ink">#171A24</color>
+    <color name="muted">#606779</color>
+    <color name="on_brand">#FFFFFF</color>
+    <color name="error">#B3261E</color>
+    <color name="error_container">#FDECEA</color>
+    <color name="notice">#7A5A00</color>
+    <color name="notice_container">#FFF6DA</color>
+    <color name="avatar_background">#F5F5F4</color>
+    <color name="avatar_glyph">#9CA3AF</color>
+
+    <!-- Results: clear semantics -->
+    <color name="win">#68B34B</color>
+    <color name="draw">#A7AFBF</color>
+    <color name="loss">#D86A6A</color>
+
+    <!-- Game-type icon accents: muted, not fighting the brand -->
+    <color name="mode_rapid">#3048C8</color>
+    <color name="mode_blitz">#4059D0</color>
+    <color name="mode_bullet">#5369D9</color>
+    <color name="mode_daily">#687BE0</color>
+    <color name="mode_960">#7B8BE8</color>
+
+    <!-- Translucent overlays -->
+    <color name="white_12">#1FFFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="scrim_dark">#33000000</color>
+    <color name="button_disabled">#9CA3AF</color>
+    <color name="ripple_light">#33FFFFFF</color>
+    <color name="ripple_dark">#1F3048C8</color>
+</resources>
